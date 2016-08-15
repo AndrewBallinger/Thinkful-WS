@@ -1,0 +1,96 @@
+/* Styles go here */
+
+htnl {
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family : "Comic Sans MS", cursive, sans-serif;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 800px;
+  min-height: 800px;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 10%;
+  font-size: 30px;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  border: solid black;
+  margin: 50px;
+}
+
+section h2 {
+  border-bottom: solid black;
+  padding-left: 20px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.half-left {
+  position: absolute;
+  left: 0%;
+  right: 50%;
+  top: 10%;
+  bottom: 0%;
+}
+
+.quarter-top-right {
+  position: absolute;
+  left: 50%;
+  right: 0%;
+  top: 10%;
+  bottom: 42.5%;
+}
+
+.quarter-bottom-right {
+  position: absolute;
+  left: 50%;
+  top: 52.5%;
+  right: 0%;
+  bottom: 0%;
+}
+
+.details-row {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.details-row div {
+  width: 50%;
+  text-align: right;
+  display: inline-block;
+}
+
+.details-row input {
+  position: absolute;
+  left: 50%;
+  width: 25%;
+  text-align: left;
+  float: right;
+}
+
+.details-buttons {
+  margin-top: 50px;
+  text-align: center;
+}
