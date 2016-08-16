@@ -8,8 +8,8 @@ angular.module('WaitstaffApp', [])
      ws.meals = [];
 
      ws.submit = function() {
-       var subtotal = ws.price + (ws.price*(ws.tax/100));
-       var tip = (ws.tip/100)*subtotal;
+       var subtotal = ws.roundCurrency( ws.price + (ws.price*(ws.tax/100)) );
+       var tip = ws.roundCurrency( (ws.tip/100)*subtotal );
        var total = subtotal + tip;
 
        ws.meals.push({
@@ -59,5 +59,9 @@ angular.module('WaitstaffApp', [])
     ws.tpm = function() {
       if (ws.meals.length == 0) return 0;
       return ws.tip_total() / ws.meal_count();
+    }
+
+    ws.roundCurrency = function(amount) {
+	return Math.round(amount * 100) / 100;
     }
   });

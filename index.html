@@ -16,43 +16,72 @@
         <form ng-submit="ws.submit()">
           <div class="details-row">
             <div>Base Meal Price: $</div>
-            <input ng-model="ws.price" type="number" required></input></div>
+            <input ng-model="ws.price" 
+                   step="0.01"
+                   type="number" 
+                   required></input></div>
 
           <div class="details-row">
             <div>Tax Rate: %</div>
-            <input ng-model="ws.tax" type="number" required></input></div>
+            <input ng-model="ws.tax" 
+                   type="number" 
+                   required></input></div>
 
           <div class="details-row">
             <div>Tip Percentage: %</div>
-            <input ng-model="ws.tip" type="number" required></input></div>
+            <input ng-model="ws.tip" 
+                   type="number" 
+                   required></input></div>
 
           <div class="details-buttons">
-	    <button> 
-              Submit</button>
-	    <button ng-click="ws.clear()">
-              Cancel</button></div></form></section>
+	    <button type="submit"> 
+              Submit </button>
+	    <button ng-click="ws.clear()" type="button">
+              Cancel </button></div></form></section>
 
       <section class="quarter-top-right">
         <h2>Customer Charges</h2>
-        <div class="info-row">
-          Subtotal {{ ws.subtotal() }}</div>
+        <div class="customer-charges-container">
+          <div class="info-row">
+            <div class="info-row-label">
+              Subtotal </div> 
+            <div class="info-row-value">
+              {{ ws.subtotal() | currency:$:2 }}</div></div>
 
-        <div class="info-row">
-          Tip {{ ws.last_tip() }}</div>
-        
-        <div class="info-bar"/>
+          <div class="info-row">
+            <div class="info-row-label">
+              Tip </div> 
+            <div class="info-row-value">
+              {{ ws.last_tip() | currency:$:2 }}</div></div>
+          
+          <div class="info-bar"></div>
 
-        <div class="info-row">
-          Total {{ ws.total() }}</div></section>
+          <div class="info-row">
+            <div class="info-row-label">
+              Total </div> 
+            <div class="info-row-value">
+              {{ ws.total() | currency:$:2 }}</div></div></div></section>
 
       <section class="quarter-bottom-right">
         <h2>My Earnings Info</h2>
 
-        <div class="info-row">
-          Tip Total {{ ws.tip_total() }}</div>
+          <div class="info-row">
+            <div class="info-row-label">
+              Tip Total: </div> 
+            <div class="info-row-value">
+              {{ ws.tip_total() | currency:$:2 }}</div></div>
 
-        <div class="info-row">
-          Meal count {{ ws.meal_count() }}</div>
-	
-        <div class="info-row">
-          Average Tip Per Meal {{ ws.tpm() }}</div></section></div></body></html>
+          <div class="info-row">
+            <div class="info-row-label">
+              Meal count: </div> 
+            <div class="info-row-value">
+              {{ ws.meal_count() | number:0 }}</div></div>
+          
+          <div class="info-row">
+            <div class="info-row-label">
+              Average Tip Per Meal: </div> 
+            <div class="info-row-value">
+              {{ ws.tpm() | currency:$:2 }}</div></div></div></section>
+
+                <div class="info-row">
+          Average Tip Per Meal {{ ws.tpm() | currency:$:2 }}</div></section></div></body></html>

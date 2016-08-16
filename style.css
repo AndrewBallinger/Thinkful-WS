@@ -17,7 +17,7 @@ body {
   height: 100%;
   width: 100%;
   min-width: 800px;
-  min-height: 800px;
+  min-height: 600px;
 }
 
 header {
@@ -38,6 +38,7 @@ header h1 {
 section {
   border: solid black;
   margin: 50px;
+  padding: 0;
 }
 
 section h2 {
@@ -94,3 +95,29 @@ section h2 {
   margin-top: 50px;
   text-align: center;
 }
+
+.info-bar {
+  height: 2px;
+  background-color: black;
+}
+
+.customer-charges-container {
+  margin-right: 40%;
+  padding-left: 20%;
+}
+
+.info-row-label {
+  display: inline-block;
+  text-align: right;
+  width: 60%;
+}
+
+.info-row-value {
+  poisition: absolute;
+  left: 61%;
+  float: right;
+  display: inline-block;
+  width: 35%;
+}
+
+
