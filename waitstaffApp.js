@@ -29,7 +29,7 @@ angular.module('WaitstaffApp', [])
 
      ws.reset = function() {
       ws.clear();
-      meals = [];
+      ws.meals = [];
      } 
 
      ws.subtotal = function() {

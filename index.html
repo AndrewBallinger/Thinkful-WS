@@ -81,7 +81,7 @@
             <div class="info-row-label">
               Average Tip Per Meal: </div> 
             <div class="info-row-value">
-              {{ ws.tpm() | currency:$:2 }}</div></div></div></section>
+              {{ ws.tpm() | currency:$:2 }}</div></div></section>
 
-                <div class="info-row">
-          Average Tip Per Meal {{ ws.tpm() | currency:$:2 }}</div></section></div></body></html>
+      <button class="reset" ng-click="ws.reset()"> Reset </button></div></body></html>
+
