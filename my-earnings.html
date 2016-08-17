@@ -1,0 +1,23 @@
+<section>
+  <h2>My Earnings Info</h2>
+
+  <div class="info-row">
+    <div class="info-row-label">
+      Tip Total: </div>
+    <div class="info-row-value">
+      {{ waitstaff.tip_total() | currency:$:2 }}</div></div>
+
+  <div class="info-row">
+    <div class="info-row-label">
+      Meal count: </div>
+    <div class="info-row-value">
+      {{ waitstaff.meal_count() | number:0 }}</div></div>
+
+  <div class="info-row">
+    <div class="info-row-label">
+      Average Tip Per Meal: </div>
+    <div class="info-row-value">
+      {{ waitstaff.tpm() | currency:$:2 }}</div></div></section>
+
+<button class="reset" ng-click="waitstaff.reset()"> Reset </button></div>
+                                                                                              

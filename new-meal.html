@@ -1,0 +1,50 @@
+<section>
+  <h2>Enter the Meal Details</h2>
+  <form ng-submit="waitstaff.submit()">
+    <div class="details-row">
+      <div>Base Meal Price: $</div>
+      <input ng-model="waitstaff.price"
+             step="0.01"
+             type="number"
+             required></input></div>
+
+    <div class="details-row">
+      <div>Tax Rate: %</div>
+      <input ng-model="waitstaff.tax"
+             type="number"
+             required></input></div>
+
+    <div class="details-row">
+      <div>Tip Percentage: %</div>
+      <input ng-model="waitstaff.tip"
+             type="number"
+             required></input></div>
+
+    <div class="details-buttons">
+      <button type="submit">
+        Submit </button>
+      <button ng-click="waitstaff.clear()" type="button">
+        Cancel </button></div></form></section>
+
+<section>
+  <h2>Customer Charges</h2>
+  <div class="customer-charges-container">
+    <div class="info-row">
+      <div class="info-row-label">
+        Subtotal </div>
+      <div class="info-row-value">
+        {{ waitstaff.last_subtotal | currency:$:2 }}</div></div>
+
+    <div class="info-row">
+      <div class="info-row-label">
+        Tip </div>
+      <div class="info-row-value">
+        {{ waitstaff.last_tip | currency:$:2 }}</div></div>
+
+    <div class="info-bar"></div>
+
+    <div class="info-row">
+      <div class="info-row-label">
+        Total </div>
+      <div class="info-row-value">
+        {{ waitstaff.last_total | currency:$:2 }}</div></div></div></section>  

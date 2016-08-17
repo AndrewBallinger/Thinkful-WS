@@ -1,87 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="WaitstaffApp">
 
   <head>
     <link rel="stylesheet" href="style.css">
     <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script data-require="angular-route.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular-route.js"></script>
     <script src="waitstaffApp.js"></script></head>
 
-  <body ng-app="WaitstaffApp">
-    <div class="content" ng-controller="WaitstaffCtrl as ws">
-
-      <header><h1>Waitstaff Calculator</h1></header>
-        
-      <section class="half-left">
-        <h2>Enter the Meal Details</h2>
-        <form ng-submit="ws.submit()">
-          <div class="details-row">
-            <div>Base Meal Price: $</div>
-            <input ng-model="ws.price" 
-                   step="0.01"
-                   type="number" 
-                   required></input></div>
-
-          <div class="details-row">
-            <div>Tax Rate: %</div>
-            <input ng-model="ws.tax" 
-                   type="number" 
-                   required></input></div>
-
-          <div class="details-row">
-            <div>Tip Percentage: %</div>
-            <input ng-model="ws.tip" 
-                   type="number" 
-                   required></input></div>
-
-          <div class="details-buttons">
-	    <button type="submit"> 
-              Submit </button>
-	    <button ng-click="ws.clear()" type="button">
-              Cancel </button></div></form></section>
-
-      <section class="quarter-top-right">
-        <h2>Customer Charges</h2>
-        <div class="customer-charges-container">
-          <div class="info-row">
-            <div class="info-row-label">
-              Subtotal </div> 
-            <div class="info-row-value">
-              {{ ws.subtotal() | currency:$:2 }}</div></div>
-
-          <div class="info-row">
-            <div class="info-row-label">
-              Tip </div> 
-            <div class="info-row-value">
-              {{ ws.last_tip() | currency:$:2 }}</div></div>
-          
-          <div class="info-bar"></div>
-
-          <div class="info-row">
-            <div class="info-row-label">
-              Total </div> 
-            <div class="info-row-value">
-              {{ ws.total() | currency:$:2 }}</div></div></div></section>
-
-      <section class="quarter-bottom-right">
-        <h2>My Earnings Info</h2>
-
-          <div class="info-row">
-            <div class="info-row-label">
-              Tip Total: </div> 
-            <div class="info-row-value">
-              {{ ws.tip_total() | currency:$:2 }}</div></div>
-
-          <div class="info-row">
-            <div class="info-row-label">
-              Meal count: </div> 
-            <div class="info-row-value">
-              {{ ws.meal_count() | number:0 }}</div></div>
-          
-          <div class="info-row">
-            <div class="info-row-label">
-              Average Tip Per Meal: </div> 
-            <div class="info-row-value">
-              {{ ws.tpm() | currency:$:2 }}</div></div></section>
-
-      <button class="reset" ng-click="ws.reset()"> Reset </button></div></body></html>
-
+  <body>
+    <a ng-href="#">Home</a>
+    <a ng-href="#/new-meal">New Meal</a>
+    <a ng-href="#/my-earnings">My Earnings</a>
+    <div class="content" ng-view></div></body></html>

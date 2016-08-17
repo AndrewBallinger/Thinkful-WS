@@ -1,0 +1,39 @@
+<p>
+It's time to practice routing and views in Angular. For this project, revisit your Waitstaff tool from Unit 1. When you last left off, this app had a single route and view. For this assignment, use ngRoute to generate three routes and views for this app. You'll have one view for the index page, one for entering the details of an individual meal, and one for seeing your earnings for a shift.
+
+  Index View
+
+  This view should load when users visit the root URL for the site ('/'). Here's a sketch:
+
+  waistaff-refactor-index-view
+
+  As you can see, this page doesn't do very much. There is some placeholder text for describing the app, and there's a link bar just under the title. From the link bar, you can access each of the three views.
+
+  Note that the title and navbar appear in each of the three views, so you'll want to write that code in index.html.
+
+  New Meal View
+
+  This view should load when users visit '/new-meal'. Here's a sketch:
+
+  waitstaff-refactor-new-meal-view
+
+  The behavior of this part of the app should be the same as before, with a few additions.
+
+  The user enters details for a new meal in the "Enter the Meal Details" panel. When they click submit, the app validates that the value in each field is numeric. If the form is valid, the "Customer Charges" panel and data model for the My Earnings view should update accordingly.
+  In the "Customer Charges" panel, Subtotal is the value of the base meal price plus tax. Tip is the dollar value of the tip, given the subtotal and tip percentage. Total is equal to subtotal plus tip.
+  If the user clicks cancel, the form should be reset to its initial state.
+  My Earnings View
+
+  This view should load when users visit '/my-earnings'. Here's a sketch:
+
+  waitstaff-refactor-my-earnings-view
+
+  This view tracks the tip and meal totals for the waiter on a given shift. The data presented in this view should change as users add new meals. If the user clicks the "Reset" button, the cumulative earnings data should be zeroed out.
+
+  Additional Requirements
+
+  If users try to visit any routes other than the three that have been explicitly defined, they should be redirected to the index of the site.
+  Be sure to use Git and Github for this assignment. You'll be adding another feature to this app in the final assignment for this lesson, so it's important you save your work as you go.
+  Your app need not be a pixel perfect rendition of these sketches. As long as your app provides the functionality indicated above, you're free to style the app as you please.
+  When you've completed this assignment, be sure to share a link to your work with your mentor. You should provide a link to the source code and a gh-pages web page.
+</p>
