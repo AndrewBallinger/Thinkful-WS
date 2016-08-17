@@ -10,6 +10,7 @@ angular.module('WaitstaffApp', ['ngRoute'])
            .when('/my-earnings', {
              templateUrl : 'my-earnings.html',
              controller : 'WaitstaffCtrl as waitstaff' })
+           .otherwise('/');
        }])
        .controller('WaitstaffCtrl', function($scope, meals){
          var waitstaff = this;
@@ -69,4 +70,8 @@ angular.module('WaitstaffApp', ['ngRoute'])
          waitstaff.roundCurrency = function(amount) {
 	       return Math.round(amount * 100) / 100;
          }
-       });
+       })
+  .run(function($rootScope, $location) {
+    $rootScope.$on('$routeChangeError', function() {
+    $location.path('/');});})
+                                               
