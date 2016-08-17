@@ -1,4 +1,4 @@
-angular.module('WaitstaffApp', ['ngRoute'])
+angular.module('WaitstaffApp', ['ngRoute', 'ngAnimate'])
        .value('meals', [])
        .config(['$routeProvider', ($routeProvider) => {
          $routeProvider

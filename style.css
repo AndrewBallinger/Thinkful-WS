@@ -1,20 +1,31 @@
-/* Styles go here */
-
-htnl {
-}
-
 html {
     height: 100%;
 }
 
 body {
     font-family : "Comic Sans MS", cursive, sans-serif;
+    perspective: 1000px;
+    perspective-origin: 50%, 50%;
 }
 
 .content {
+    position: absolute;
     width: 100%;
     min-width: 400px;
     min-height: 600px;
+    transition: 0.05s linear all;
+    background-color: white;
+}
+
+.animate-view-container { position:relative; min-height: 100%;}
+
+.content.ng-enter-active {
+    transform: rotateX(90deg) translateZ(-100px);
+}
+
+.content.ng-leave-active {
+    transform:  rotateX(-90deg) translateZ(100px) ;
+    z-index: 100;
 }
 
 header {
@@ -130,6 +141,3 @@ section h2 {
 button {
     margin-bottom: 50px;
 }
-
-
-
