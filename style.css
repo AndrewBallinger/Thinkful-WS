@@ -4,126 +4,132 @@ htnl {
 }
 
 html {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  font-family : "Comic Sans MS", cursive, sans-serif;
-  height: 100%;
+    font-family : "Comic Sans MS", cursive, sans-serif;
 }
 
 .content {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  min-width: 800px;
-  min-height: 600px;
+    width: 100%;
+    min-width: 400px;
+    min-height: 600px;
 }
 
 header {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  height: 10%;
-  font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 10%;
+    font-size: 30px;
+    min-width: 750px;
 }
 
 header h1 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 section {
-  border: solid black;
-  margin: 50px;
-  padding: 0;
+    border: solid black;
+    margin: 50px;
+    padding: 0;
+    max-width: 800px;
+    min-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section h2 {
-  border-bottom: solid black;
-  padding-left: 20px;
-  margin-top: 10px;
-  padding-bottom: 10px;
+    border-bottom: solid black;
+    padding-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
 }
 
 .half-left {
-  position: absolute;
-  left: 0%;
-  right: 50%;
-  top: 10%;
-  bottom: 0%;
+    position: absolute;
+    left: 0%;
+    right: 50%;
+    top: 10%;
+    bottom: 0%;
 }
 
 .quarter-top-right {
-  position: absolute;
-  left: 50%;
-  right: 0%;
-  top: 10%;
-  bottom: 42.5%;
+    position: absolute;
+    left: 50%;
+    right: 0%;
+    top: 10%;
+    bottom: 42.5%;
 }
 
 .quarter-bottom-right {
-  position: absolute;
-  left: 50%;
-  top: 52.5%;
-  right: 0%;
-  bottom: 0%;
+    position: absolute;
+    left: 50%;
+    top: 52.5%;
+    right: 0%;
+    bottom: 0%;
 }
 
 .details-row {
-  width: 100%;
-  margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .details-row div {
-  width: 50%;
-  text-align: right;
-  display: inline-block;
+    width: 50%;
+    text-align: right;
+    display: inline-block;
 }
 
 .details-row input {
-  position: absolute;
-  left: 50%;
-  width: 25%;
-  text-align: left;
-  float: right;
+    position: absolute;
+    left: 50%;
+    width: 25%;
+    max-width: 200px;
+    text-align: left;
+    float: right;
 }
 
 .details-buttons {
-  margin-top: 50px;
-  text-align: center;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .info-bar {
-  height: 2px;
-  background-color: black;
+    height: 2px;
+    background-color: black;
 }
 
 .customer-charges-container {
-  margin-right: 40%;
-  padding-left: 20%;
+    margin-right: 40%;
+    padding-left: 20%;
 }
 
 .info-row-label {
-  display: inline-block;
-  text-align: right;
-  width: 60%;
+    display: inline-block;
+    text-align: right;
+    width: 60%;
 }
 
 .info-row-value {
-  poisition: absolute;
-  left: 61%;
-  float: right;
-  display: inline-block;
-  width: 35%;
+    poisition: absolute;
+    left: 61%;
+    float: right;
+    display: inline-block;
+    width: 35%;
 }
 
 .reset {
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
+    position: absolute;
+    right: 50%;
 }
+
+button {
+    margin-bottom: 50px;
+}
+
 
 
